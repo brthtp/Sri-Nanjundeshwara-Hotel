@@ -8,9 +8,9 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "The Menu — Hotel Nanjundeshwara" },
-      { name: "description", content: "Explore Hotel Nanjundeshwara's seasonal tasting menu — starters, mains, seafood, vegetarian, desserts and rare beverages." },
-      { property: "og:title", content: "The Menu — Hotel Nanjundeshwara" },
+      { title: "The Menu — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "Explore Sri Nanjundeshwara Hotel 's seasonal tasting menu — starters, mains, seafood, vegetarian, desserts and rare beverages." },
+      { property: "og:title", content: "The Menu — Sri Nanjundeshwara Hotel " },
       { property: "og:description", content: "A seasonal Michelin-star menu, updated by Chef Laurent Verdé." },
     ],
   }),

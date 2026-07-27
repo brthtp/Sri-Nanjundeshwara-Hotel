@@ -10,9 +10,9 @@ import dish3 from "@/assets/dish-3.jpg";
 export const Route = createFileRoute("/chef")({
   head: () => ({
     meta: [
-      { title: "Our Culinary Heritage — Hotel Nanjundeshwara" },
-      { name: "description", content: "Discover the culinary mastery behind Hotel Nanjundeshwara — preserving authentic South Indian pure veg traditions and flavors for decades." },
-      { property: "og:title", content: "Our Culinary Heritage — Hotel Nanjundeshwara" },
+      { title: "Our Culinary Heritage — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "Discover the culinary mastery behind Sri Nanjundeshwara Hotel  — preserving authentic South Indian pure veg traditions and flavors for decades." },
+      { property: "og:title", content: "Our Culinary Heritage — Sri Nanjundeshwara Hotel " },
       { property: "og:description", content: "Meet the masters behind our authentic vegetarian cuisine." },
     ],
   }),

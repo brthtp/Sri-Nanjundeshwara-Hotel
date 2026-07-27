@@ -15,9 +15,9 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Hotel Nanjundeshwara — Premium Pure Veg Restaurant & Party Hall" },
-      { name: "description", content: "Experience authentic South Indian pure vegetarian dining. Reserve a table or book our elegant party hall at Hotel Nanjundeshwara for unforgettable celebrations." },
-      { property: "og:title", content: "Hotel Nanjundeshwara — Pure Veg & Party Hall" },
+      { title: "Sri Nanjundeshwara Hotel  — Premium Pure Veg Restaurant & Party Hall" },
+      { name: "description", content: "Experience authentic South Indian pure vegetarian dining. Reserve a table or book our elegant party hall at Sri Nanjundeshwara Hotel  for unforgettable celebrations." },
+      { property: "og:title", content: "Sri Nanjundeshwara Hotel  — Pure Veg & Party Hall" },
       { property: "og:description", content: "Authentic flavors, uncompromising quality. Book our premium venue or dine with us today." },
     ],
   }),
@@ -53,7 +53,7 @@ function Home() {
       <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <img
           src={hero}
-          alt="Hotel Nanjundeshwara Dining & Event Venue"
+          alt="Sri Nanjundeshwara Hotel  Dining & Event Venue"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -291,7 +291,7 @@ function Home() {
             <div className="relative">
               <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Reservations & Events</span>
               <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl">
-                Host your next celebration at Hotel Nanjundeshwara.
+                Host your next celebration at Sri Nanjundeshwara Hotel .
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-cream/75">
                 Our premium party hall is perfect for weddings, birthdays, and corporate events. Contact our team to plan your customized pure veg catering menu.

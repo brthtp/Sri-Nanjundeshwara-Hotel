@@ -15,10 +15,10 @@ import dish3 from "@/assets/dish-3.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Hotel Nanjundeshwara" },
-      { name: "description", content: "A visual journey through Hotel Nanjundeshwara — interiors, signature dishes, private dining, terrace and events." },
-      { property: "og:title", content: "Gallery — Hotel Nanjundeshwara" },
-      { property: "og:description", content: "Interiors, dishes and private dining at Hotel Nanjundeshwara." },
+      { title: "Gallery — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "A visual journey through Sri Nanjundeshwara Hotel  — interiors, signature dishes, private dining, terrace and events." },
+      { property: "og:title", content: "Gallery — Sri Nanjundeshwara Hotel " },
+      { property: "og:description", content: "Interiors, dishes and private dining at Sri Nanjundeshwara Hotel ." },
     ],
   }),
   component: Gallery,

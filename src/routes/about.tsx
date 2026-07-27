@@ -7,10 +7,10 @@ import chefImg from "@/assets/chef.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Hotel Nanjundeshwara" },
-      { name: "description", content: "Our philosophy, mission, and values that shape the authentic pure vegetarian dining and party hall experience at Hotel Nanjundeshwara." },
-      { property: "og:title", content: "About Us — Hotel Nanjundeshwara" },
-      { property: "og:description", content: "Philosophy, mission, and pure culinary craft at Hotel Nanjundeshwara." },
+      { title: "About Us — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "Our philosophy, mission, and values that shape the authentic pure vegetarian dining and party hall experience at Sri Nanjundeshwara Hotel ." },
+      { property: "og:title", content: "About Us — Sri Nanjundeshwara Hotel " },
+      { property: "og:description", content: "Philosophy, mission, and pure culinary craft at Sri Nanjundeshwara Hotel ." },
     ],
   }),
   component: About,
@@ -100,7 +100,7 @@ function AboutPage() {
       {/* WHY */}
       <section className="bg-secondary text-secondary-foreground py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="Why Hotel Nanjundeshwara" title="Details that guests remember." />
+          <SectionHeader eyebrow="Why Sri Nanjundeshwara Hotel " title="Details that guests remember." />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {why.map((w, i) => (
               <motion.div

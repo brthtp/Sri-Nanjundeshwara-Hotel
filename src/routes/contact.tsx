@@ -8,9 +8,9 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Hotel Nanjundeshwara" },
-      { name: "description", content: "Get in touch with Hotel Nanjundeshwara in Bengaluru. Address, phone, email, business hours, and party hall inquiries." },
-      { property: "og:title", content: "Contact — Hotel Nanjundeshwara" },
+      { title: "Contact — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "Get in touch with Sri Nanjundeshwara Hotel  in Bengaluru. Address, phone, email, business hours, and party hall inquiries." },
+      { property: "og:title", content: "Contact — Sri Nanjundeshwara Hotel " },
       { property: "og:description", content: "Visit us in Bengaluru. Reservations, party hall bookings, hours, and directions." },
     ],
   }),
@@ -81,7 +81,7 @@ function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="overflow-hidden rounded-3xl border border-border shadow-luxe">
             <iframe
-              title="Hotel Nanjundeshwara location"
+              title="Sri Nanjundeshwara Hotel  location"
               src="https://www.google.com/maps?q=Kyathasandra+Hirehalli+Karnataka+572104&output=embed"
               className="h-[420px] w-full"
               loading="lazy"

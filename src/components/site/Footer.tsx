@@ -74,7 +74,7 @@ export function Footer() {
 
       <div className="border-t border-primary/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-cream/60 sm:flex-row lg:px-10">
-          <p>© {new Date().getFullYear()} Hotel Nanjundeshwara. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sri Nanjundeshwara Hotel . All rights reserved.</p>
           <p className="tracking-[0.25em] uppercase text-primary/80">Est. 1968</p>
         </div>
       </div>

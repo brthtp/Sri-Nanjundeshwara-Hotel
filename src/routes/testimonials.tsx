@@ -7,9 +7,9 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Guest Reviews & Praise — Hotel Nanjundeshwara" },
-      { name: "description", content: "Read what our guests say about our authentic South Indian pure vegetarian delicacies and party hall event experiences at Hotel Nanjundeshwara." },
-      { property: "og:title", content: "Guest Reviews — Hotel Nanjundeshwara" },
+      { title: "Guest Reviews & Praise — Sri Nanjundeshwara Hotel " },
+      { name: "description", content: "Read what our guests say about our authentic South Indian pure vegetarian delicacies and party hall event experiences at Sri Nanjundeshwara Hotel ." },
+      { property: "og:title", content: "Guest Reviews — Sri Nanjundeshwara Hotel " },
       { property: "og:description", content: "Praise from food lovers, families, and event hosts." },
     ],
   }),

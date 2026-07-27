@@ -10,10 +10,10 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/legacy")({
   head: () => ({
     meta: [
-      { title: "Our Legacy — Hotel Nanjundeshwara since 1968" },
-      { name: "description", content: "The story of Hotel Nanjundeshwara — over five decades of authentic South Indian pure vegetarian culinary heritage and memorable celebrations." },
-      { property: "og:title", content: "Our Legacy — Hotel Nanjundeshwara" },
-      { property: "og:description", content: "Since 1968: The journey of Hotel Nanjundeshwara from a humble tiffin room to a beloved pure veg institution and party hall venue." },
+      { title: "Our Legacy — Sri Nanjundeshwara Hotel  since 1968" },
+      { name: "description", content: "The story of Sri Nanjundeshwara Hotel  — over five decades of authentic South Indian pure vegetarian culinary heritage and memorable celebrations." },
+      { property: "og:title", content: "Our Legacy — Sri Nanjundeshwara Hotel " },
+      { property: "og:description", content: "Since 1968: The journey of Sri Nanjundeshwara Hotel  from a humble tiffin room to a beloved pure veg institution and party hall venue." },
     ],
   }),
   component: LegacyPage,

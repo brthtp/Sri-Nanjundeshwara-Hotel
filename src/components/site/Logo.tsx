@@ -8,7 +8,7 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
         <span className="font-display text-lg text-gradient-gold">HN</span>
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-display text-lg tracking-wide">Hotel Nanjundeshwara</span>
+        <span className="font-display text-lg tracking-wide">Sri Nanjundeshwara Hotel </span>
         <span className="text-[10px] uppercase tracking-[0.3em] text-primary">Est. 1968</span>
       </span>
     </Link>
