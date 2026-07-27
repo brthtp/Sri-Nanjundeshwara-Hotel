@@ -10,28 +10,57 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/legacy")({
   head: () => ({
     meta: [
-      { title: "Our Legacy — Maison Verdé since 1968" },
-      { name: "description", content: "The complete story of Maison Verdé — four generations of family, craft, and Michelin-star hospitality since 1968." },
-      { property: "og:title", content: "Our Legacy — Maison Verdé" },
-      { property: "og:description", content: "Since 1968: the story of Maison Verdé, from a Parisian bistro to a three-star institution." },
+      { title: "Our Legacy — Hotel Nanjundeshwara since 1968" },
+      { name: "description", content: "The story of Hotel Nanjundeshwara — over five decades of authentic South Indian pure vegetarian culinary heritage and memorable celebrations." },
+      { property: "og:title", content: "Our Legacy — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Since 1968: The journey of Hotel Nanjundeshwara from a humble tiffin room to a beloved pure veg institution and party hall venue." },
     ],
   }),
   component: LegacyPage,
 });
 
 const TIMELINE = [
-  { year: "1968", title: "Restaurant founded", img: legacy, text: "Antoine and Marguerite Verdé open a twelve-seat bistro on Rue de l'Élégance, cooking Sunday recipes for tired Parisians." },
-  { year: "1985", title: "Expansion", img: gal4, text: "The maison acquires the neighbouring townhouse, opening the grand salon and adding a formal wine cellar of 400 references." },
-  { year: "2002", title: "Renovation", img: gal1, text: "A quiet reimagining led by architect Étienne Lacombe — emerald and gold interiors that still define the room today." },
-  { year: "2020", title: "Modern Fine Dining", img: gal2, text: "Chef Laurent Verdé rewrites the tasting menu around hyper-seasonal European sourcing. Three Michelin stars, four years running." },
-  { year: "Today", title: "The family legacy continues", img: hero, text: "Fourth-generation Camille joins as Creative Director. The same table, the same standard, a new century of evenings ahead." },
+  { 
+    year: "1968", 
+    title: "Humble Beginnings", 
+    img: legacy, 
+    text: "Founded as a modest pure-vegetarian tiffin room serving steaming hot idlis, golden dosas, and aromatic filter coffee to local neighborhood patrons." 
+  },
+  { 
+    year: "1985", 
+    title: "Expanding the Kitchen", 
+    img: gal4, 
+    text: "Expanded the main dining hall to introduce our iconic South Indian Grand Thali meal, crafted daily with freshly ground spices and pure ghee." 
+  },
+  { 
+    year: "2002", 
+    title: "Modern Family Dining", 
+    img: gal1, 
+    text: "Underwent a comprehensive interior transformation to create a warm, comfortable dining space for families while upholding traditional kitchen ethics." 
+  },
+  { 
+    year: "2020", 
+    title: "The Grand Party Hall", 
+    img: gal2, 
+    text: "Inaugurated a state-of-the-art banquet venue complete with customizable pure-veg catering for weddings, naming ceremonies, and corporate events." 
+  },
+  { 
+    year: "Today", 
+    title: "A Living Culinary Tradition", 
+    img: hero, 
+    text: "Driven by generations of culinary passion, we continue serving thousands of guests daily with uncompromising purity, rich taste, and humble hospitality." 
+  },
 ];
 
 function LegacyPage() {
   return (
     <div className="pt-32">
       <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-        <SectionHeader eyebrow="Our Legacy" title="Fifty-seven years, one table." subtitle="A single-family maison, unchanged in spirit since 1968." />
+        <SectionHeader 
+          eyebrow="Our Legacy" 
+          title="Over five decades, one timeless taste." 
+          subtitle="A cherished pure vegetarian institution, serving authentic flavors with devotion since 1968." 
+        />
       </section>
 
       <section className="relative mx-auto max-w-6xl px-6 pb-32 lg:px-10">

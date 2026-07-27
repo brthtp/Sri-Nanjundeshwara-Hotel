@@ -8,10 +8,10 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Maison Verdé" },
-      { name: "description", content: "Find Maison Verdé in Paris. Address, phone, email, business hours and reservation concierge." },
-      { property: "og:title", content: "Contact — Maison Verdé" },
-      { property: "og:description", content: "Visit us in Paris. Reservations, hours, and directions." },
+      { title: "Contact — Hotel Nanjundeshwara" },
+      { name: "description", content: "Get in touch with Hotel Nanjundeshwara in Bengaluru. Address, phone, email, business hours, and party hall inquiries." },
+      { property: "og:title", content: "Contact — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Visit us in Bengaluru. Reservations, party hall bookings, hours, and directions." },
     ],
   }),
   component: ContactPage,
@@ -22,16 +22,20 @@ function ContactPage() {
   return (
     <div className="pt-32">
       <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-        <SectionHeader eyebrow="Contact" title="Visit the maison" subtitle="A concierge is available seven days a week to assist with reservations, private events, and press." />
+        <SectionHeader 
+          eyebrow="Contact" 
+          title="Visit our restaurant" 
+          subtitle="Our team is available every day to assist with table reservations, party hall bookings, and catering inquiries." 
+        />
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-24 lg:grid-cols-2 lg:px-10">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="space-y-4">
           {[
-            { icon: MapPin, title: "Address", value: "12 Rue de l'Élégance · Paris 75008" },
-            { icon: Phone, title: "Reservations", value: "+33 (0)1 42 68 84 00" },
-            { icon: Mail, title: "Concierge", value: "reservations@maisonverde.com" },
-            { icon: Clock, title: "Hours", value: "Tue – Sat · 19:00 – 23:30 · Closed Sun & Mon" },
+            { icon: MapPin, title: "Address", value: "Sannappana Palya, Kyathasandra, Hirehalli, Karnataka 572104" },
+            { icon: Phone, title: "Reservations & Events", value: "+91 96064 45780" },
+            { icon: Mail, title: "Inquiries", value: "namaskara@hotelnanjundeshwara.in" },
+            { icon: Clock, title: "Hours", value: "Mon – Sun · 07:00 AM – 10:45 PM" },
           ].map((c) => (
             <div key={c.title} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full gradient-gold text-[oklch(0.2_0.02_150)]">
@@ -57,14 +61,14 @@ function ContactPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          onSubmit={(e) => { e.preventDefault(); setSent(true); toast.success("Message received — our concierge will reply within 24h."); }}
+          onSubmit={(e) => { e.preventDefault(); setSent(true); toast.success("Message received — our team will reply within 24 hours."); }}
           className="rounded-3xl bg-card p-8 shadow-luxe"
         >
-          <h3 className="font-display text-2xl">Write to the concierge</h3>
+          <h3 className="font-display text-2xl">Send us a message</h3>
           <div className="mt-6 space-y-4">
             <input required placeholder="Your name" className="w-full rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-primary" />
             <input required type="email" placeholder="Email" className="w-full rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-primary" />
-            <input placeholder="Subject" className="w-full rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-primary" />
+            <input placeholder="Subject (e.g. Party Hall Booking)" className="w-full rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-primary" />
             <textarea required rows={5} placeholder="Message" className="w-full rounded-2xl border border-border bg-background px-5 py-3 text-sm outline-none focus:border-primary" />
             <button className="w-full rounded-full gradient-gold py-3 text-sm font-semibold text-[oklch(0.2_0.02_150)] shadow-soft transition hover:brightness-105">
               {sent ? "Message sent" : "Send message"}
@@ -77,8 +81,8 @@ function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="overflow-hidden rounded-3xl border border-border shadow-luxe">
             <iframe
-              title="Maison Verdé location"
-              src="https://www.google.com/maps?q=Champs+%C3%89lys%C3%A9es+Paris&output=embed"
+              title="Hotel Nanjundeshwara location"
+              src="https://www.google.com/maps?q=Kyathasandra+Hirehalli+Karnataka+572104&output=embed"
               className="h-[420px] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

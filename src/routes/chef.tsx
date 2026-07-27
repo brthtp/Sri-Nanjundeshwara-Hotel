@@ -10,19 +10,19 @@ import dish3 from "@/assets/dish-3.jpg";
 export const Route = createFileRoute("/chef")({
   head: () => ({
     meta: [
-      { title: "Chef Laurent Verdé — Maison Verdé" },
-      { name: "description", content: "Meet Chef Laurent Verdé — trained by Robuchon and Passard, leading Maison Verdé's three-star kitchen since 2011." },
-      { property: "og:title", content: "Chef Laurent Verdé — Maison Verdé" },
-      { property: "og:description", content: "Meet the head chef and see his signature dishes." },
+      { title: "Our Culinary Heritage — Hotel Nanjundeshwara" },
+      { name: "description", content: "Discover the culinary mastery behind Hotel Nanjundeshwara — preserving authentic South Indian pure veg traditions and flavors for decades." },
+      { property: "og:title", content: "Our Culinary Heritage — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Meet the masters behind our authentic vegetarian cuisine." },
     ],
   }),
   component: ChefPage,
 });
 
 const SIG = [
-  { name: "Diver Scallops", img: dish1 },
-  { name: "Wagyu A5", img: dish2 },
-  { name: "Chocolate Verdé", img: dish3 },
+  { name: "Nanjundeshwara Ghee Masala Dosa", img: dish3 },
+  { name: "Grand Royal Thali", img: dish2 },
+  { name: "Idli Vada Combo", img: dish1 },
 ];
 
 function ChefPage() {
@@ -38,11 +38,11 @@ function ChefPage() {
             className="relative"
           >
             <div className="overflow-hidden rounded-[2rem] shadow-luxe">
-              <img src={chefImg} alt="Chef Laurent Verdé" className="aspect-[4/5] w-full object-cover" />
+              <img src={chefImg} alt="Our Master Chefs" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-4 hidden rounded-2xl glass p-5 shadow-luxe sm:block">
               <Award className="text-primary" />
-              <p className="mt-2 font-display text-lg">3⭐ Michelin</p>
+              <p className="mt-2 font-display text-lg">100% Pure Veg</p>
             </div>
           </motion.div>
 
@@ -52,14 +52,14 @@ function ChefPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
           >
-            <p className="text-[11px] uppercase tracking-[0.35em] text-primary">Head Chef</p>
-            <h1 className="mt-4 font-display text-5xl sm:text-6xl">Laurent Verdé</h1>
+            <p className="text-[11px] uppercase tracking-[0.35em] text-primary">The Kitchen</p>
+            <h1 className="mt-4 font-display text-5xl sm:text-6xl">Mastering Tradition</h1>
             <p className="mt-6 text-muted-foreground">
-              Third-generation Verdé and third-generation cook. Laurent trained at L'Atelier de Joël Robuchon and Arpège under Alain Passard, before returning to lead the family kitchen in 2011. His food is quiet, exact, and generous — a philosophy of restraint.
+              Rooted in the rich culinary heritage of Karnataka, our kitchen is led by traditional maestros of pure vegetarian cuisine. Every spice blend is roasted and ground in-house, and every dish is prepared with the same devotion that has delighted families for years. For us, cooking is not just a service—it is a sacred philosophy of pure, sattvic food.
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
-              {[["32","Years cooking"],["2011","Head chef since"],["3","Michelin stars"]].map(([n,l]) => (
+              {[["100%","Pure Vegetarian"],["1000s","Of Happy Guests"],["1","Uncompromising Standard"]].map(([n,l]) => (
                 <div key={l}>
                   <p className="font-display text-3xl text-gradient-gold">{n}</p>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{l}</p>
@@ -68,9 +68,14 @@ function ChefPage() {
             </div>
 
             <div className="mt-10">
-              <h3 className="font-display text-xl">Distinctions</h3>
+              <h3 className="font-display text-xl">Our Distinctions</h3>
               <ul className="mt-4 space-y-2 text-sm">
-                {["Meilleur Ouvrier de France · 2009","Bocuse d'Or Finalist · 2013","Michelin ⭐⭐⭐ · since 2020","Chef of the Year — Le Chef Magazine, 2023"].map((a) => (
+                {[
+                  "Authentic Udupi & Karavali Flavors",
+                  "Premium Party Hall & Catering Excellence",
+                  "Farm-Fresh Ingredients Sourced Daily",
+                  "Zero Artificial Colors or Preservatives"
+                ].map((a) => (
                   <li key={a} className="flex items-center gap-3"><Star size={14} className="text-primary" /> {a}</li>
                 ))}
               </ul>
@@ -81,7 +86,7 @@ function ChefPage() {
 
       <section className="bg-secondary text-secondary-foreground py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="Signature Dishes" title="Plates that define the house" />
+          <SectionHeader eyebrow="Signature Dishes" title="Flavors that define our house" />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {SIG.map((s, i) => (
               <motion.div

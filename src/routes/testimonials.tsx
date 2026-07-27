@@ -7,21 +7,51 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Guest Reviews — Maison Verdé" },
-      { name: "description", content: "What guests, critics and press say about a Michelin-star evening at Maison Verdé." },
-      { property: "og:title", content: "Guest Reviews — Maison Verdé" },
-      { property: "og:description", content: "Praise from critics, press and long-standing guests." },
+      { title: "Guest Reviews & Praise — Hotel Nanjundeshwara" },
+      { name: "description", content: "Read what our guests say about our authentic South Indian pure vegetarian delicacies and party hall event experiences at Hotel Nanjundeshwara." },
+      { property: "og:title", content: "Guest Reviews — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Praise from food lovers, families, and event hosts." },
     ],
   }),
   component: TestimonialsPage,
 });
 
 const REVIEWS = [
-  { name: "Élodie Rousseau", role: "Le Figaro", text: "A quiet revolution on the plate — technique in service of memory. Maison Verdé is the standard the rest of Paris is quietly measured against.", rating: 5, avatar: "https://i.pravatar.cc/120?img=47" },
-  { name: "James Hollingsworth", role: "Guest since 2016", text: "The most complete dining experience I've had in Europe. Service reads the room like a piece of chamber music.", rating: 5, avatar: "https://i.pravatar.cc/120?img=12" },
-  { name: "Priya Narayan", role: "Food & Wine", text: "Every course lands like a small ceremony. Book six months out. Bring someone you love.", rating: 5, avatar: "https://i.pravatar.cc/120?img=32" },
-  { name: "Alessandro Conti", role: "Guest", text: "From the amuse-bouche to the mignardises, an evening of complete stillness. Peerless.", rating: 5, avatar: "https://i.pravatar.cc/120?img=15" },
-  { name: "Marion Dufour", role: "Gault & Millau", text: "The Verdé family has kept a promise for four generations. This is what a maison should feel like.", rating: 5, avatar: "https://i.pravatar.cc/120?img=45" },
+  { 
+    name: "Priya Sundaram", 
+    role: "Local Foodie", 
+    text: "The Nanjundeshwara Ghee Masala Dosa is unmatched. Crisp, golden, and served with rich coconut chutney and piping hot sambar. My absolute go-to breakfast spot every weekend!", 
+    rating: 5, 
+    avatar: "https://i.pravatar.cc/120?img=32" 
+  },
+  { 
+    name: "Rajesh Kumar", 
+    role: "Family Event Host", 
+    text: "We hosted our parents' 50th wedding anniversary in their Party Hall. The management handled everything flawlessly, and the pure veg Grand Thali impressed every single guest.", 
+    rating: 5, 
+    avatar: "https://i.pravatar.cc/120?img=12" 
+  },
+  { 
+    name: "Ananya Venkatesh", 
+    role: "Regular Guest", 
+    text: "Authentic Karnataka flavors prepared with pure ghee and utmost hygiene. Ending the meal with their Degree Filter Coffee is pure bliss!", 
+    rating: 5, 
+    avatar: "https://i.pravatar.cc/120?img=47" 
+  },
+  { 
+    name: "Suresh Babu", 
+    role: "Corporate Event Organizer", 
+    text: "Booked the venue for a company celebration lunch. Excellent hall ambiance, spacious seating, prompt service, and incredible South Indian catering.", 
+    rating: 5, 
+    avatar: "https://i.pravatar.cc/120?img=15" 
+  },
+  { 
+    name: "Meenakshi R.", 
+    role: "Weekend Diner", 
+    text: "The best place in town for traditional tiffin and meals. Generous portions, spotless cleanliness, and warm, humble hospitality that makes you feel at home.", 
+    rating: 5, 
+    avatar: "https://i.pravatar.cc/120?img=45" 
+  },
 ];
 
 function TestimonialsPage() {
@@ -35,7 +65,11 @@ function TestimonialsPage() {
   return (
     <div className="pt-32">
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
-        <SectionHeader eyebrow="Kind Words" title="Praise for the house" subtitle="A selection of reviews from guests, critics and long-standing friends of the maison." />
+        <SectionHeader 
+          eyebrow="Kind Words" 
+          title="Praise from our guests" 
+          subtitle="A selection of reviews from daily diners, families, and event hosts who celebrate with us." 
+        />
 
         <div className="relative mx-auto mt-16 max-w-4xl">
           <AnimatePresence mode="wait">
@@ -55,7 +89,7 @@ function TestimonialsPage() {
                 {Array.from({ length: r.rating }).map((_, k) => <Star key={k} size={16} fill="currentColor" />)}
               </div>
               <footer className="mt-6 flex items-center gap-4">
-                <img src={r.avatar} alt="" className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/40" />
+                <img src={r.avatar} alt={r.name} className="h-12 w-12 rounded-full object-cover ring-2 ring-primary/40" />
                 <div>
                   <p className="font-display text-lg">{r.name}</p>
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{r.role}</p>
@@ -65,13 +99,30 @@ function TestimonialsPage() {
           </AnimatePresence>
 
           <div className="mt-6 flex items-center justify-between">
-            <button onClick={() => setI((v) => (v - 1 + REVIEWS.length) % REVIEWS.length)} className="grid h-11 w-11 place-items-center rounded-full border border-primary/40 hover:bg-primary/10"><ChevronLeft size={18} /></button>
+            <button 
+              onClick={() => setI((v) => (v - 1 + REVIEWS.length) % REVIEWS.length)} 
+              className="grid h-11 w-11 place-items-center rounded-full border border-primary/40 hover:bg-primary/10"
+              aria-label="Previous review"
+            >
+              <ChevronLeft size={18} />
+            </button>
             <div className="flex gap-2">
               {REVIEWS.map((_, k) => (
-                <button key={k} onClick={() => setI(k)} className={`h-1.5 rounded-full transition-all ${k === i ? "w-8 bg-primary" : "w-3 bg-border"}`} />
+                <button 
+                  key={k} 
+                  onClick={() => setI(k)} 
+                  className={`h-1.5 rounded-full transition-all ${k === i ? "w-8 bg-primary" : "w-3 bg-border"}`} 
+                  aria-label={`Go to slide ${k + 1}`}
+                />
               ))}
             </div>
-            <button onClick={() => setI((v) => (v + 1) % REVIEWS.length)} className="grid h-11 w-11 place-items-center rounded-full border border-primary/40 hover:bg-primary/10"><ChevronRight size={18} /></button>
+            <button 
+              onClick={() => setI((v) => (v + 1) % REVIEWS.length)} 
+              className="grid h-11 w-11 place-items-center rounded-full border border-primary/40 hover:bg-primary/10"
+              aria-label="Next review"
+            >
+              <ChevronRight size={18} />
+            </button>
           </div>
         </div>
 
@@ -90,7 +141,7 @@ function TestimonialsPage() {
               </div>
               <p className="mt-4 text-sm text-foreground/85">"{t.text}"</p>
               <div className="mt-5 flex items-center gap-3">
-                <img src={t.avatar} alt="" className="h-9 w-9 rounded-full object-cover" />
+                <img src={t.avatar} alt={t.name} className="h-9 w-9 rounded-full object-cover" />
                 <div>
                   <p className="text-sm font-medium">{t.name}</p>
                   <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t.role}</p>

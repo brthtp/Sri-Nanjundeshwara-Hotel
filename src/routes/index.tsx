@@ -15,33 +15,33 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maison Verdé — Michelin-Star Fine Dining in Paris" },
-      { name: "description", content: "A timeless Michelin-star dining experience in the heart of Paris. Reserve your table at Maison Verdé — European craft, seasonal ingredients, unforgettable evenings." },
-      { property: "og:title", content: "Maison Verdé — Michelin-Star Fine Dining" },
-      { property: "og:description", content: "Timeless European fine dining. Reserve your table or private venue at Maison Verdé, Paris." },
+      { title: "Hotel Nanjundeshwara — Premium Pure Veg Restaurant & Party Hall" },
+      { name: "description", content: "Experience authentic South Indian pure vegetarian dining. Reserve a table or book our elegant party hall at Hotel Nanjundeshwara for unforgettable celebrations." },
+      { property: "og:title", content: "Hotel Nanjundeshwara — Pure Veg & Party Hall" },
+      { property: "og:description", content: "Authentic flavors, uncompromising quality. Book our premium venue or dine with us today." },
     ],
   }),
   component: Home,
 });
 
 const featured = [
-  { name: "Diver Scallops", tag: "Chef's Signature", price: "€48", img: dish1 },
-  { name: "Wagyu A5", tag: "Main Course", price: "€96", img: dish2 },
-  { name: "Chocolate Verdé", tag: "Dessert", price: "€24", img: dish3 },
+  { name: "Idli Vada Combo", tag: "Breakfast Classic", price: "₹120", img: dish1 },
+  { name: "Grand Royal Thali", tag: "Main Course", price: "₹280", img: dish2 },
+  { name: "Ghee Masala Dosa", tag: "Signature", price: "₹180", img: dish3 },
 ];
 
 const highlights = [
-  { icon: Award, title: "Three Michelin Stars", desc: "Continuous distinction since 2004." },
-  { icon: Utensils, title: "Seasonal Tasting", desc: "9-course chef's journey, changing monthly." },
-  { icon: Sparkles, title: "Private Venue", desc: "Salons for 8 to 120 guests." },
+  { icon: Award, title: "100% Pure Vegetarian", desc: "Authentic, sattvic recipes crafted without artificial colors or flavors." },
+  { icon: Utensils, title: "Heritage Flavors", desc: "Traditional South Indian culinary secrets, prepared fresh daily." },
+  { icon: Sparkles, title: "Premium Party Hall", desc: "Elegant, spacious venues perfect for weddings and family celebrations." },
 ];
 
-const awards = ["Michelin ⭐⭐⭐ 2024", "World's 50 Best · #12", "Gault & Millau 19/20", "Grand Prix Culinaire 2022"];
+const awards = ["Legacy of Authentic Taste", "Top Rated Pure Veg", "Premium Event Venue", "Thousands of Happy Guests"];
 
 const testimonials = [
-  { name: "Élodie R.", role: "Le Figaro", text: "A quiet revolution on the plate — technique in service of memory.", rating: 5 },
-  { name: "James H.", role: "Guest", text: "The most complete dining experience I've had in Europe. Peerless service.", rating: 5 },
-  { name: "Priya N.", role: "Food & Wine", text: "Every course lands like a small ceremony. Book six months out.", rating: 5 },
+  { name: "Priya S.", role: "Local Foodie", text: "The absolute best Ghee Masala Dosa in town. The chutney is divine and the service is always warm.", rating: 5 },
+  { name: "Rahul K.", role: "Event Host", text: "Hosted my daughter's naming ceremony in their party hall. Flawless catering and a beautiful, spotless venue.", rating: 5 },
+  { name: "Ananya V.", role: "Regular Guest", text: "A true taste of traditional Karnataka meals. Every bite feels like home, prepared with absolute purity.", rating: 5 },
 ];
 
 const gallery = [gal1, gal2, gal3, gal4];
@@ -53,7 +53,7 @@ function Home() {
       <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <img
           src={hero}
-          alt="Maison Verdé dining room"
+          alt="Hotel Nanjundeshwara Dining & Event Venue"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -68,7 +68,7 @@ function Home() {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="flex items-center gap-3 text-[11px] uppercase tracking-[0.4em] text-primary"
           >
-            <span className="h-px w-10 bg-primary/70" /> Paris · Est. 1968
+            <span className="h-px w-10 bg-primary/70" /> Bengaluru · Heritage Dining
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ function Home() {
             transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 text-balance font-display text-5xl leading-[1.05] sm:text-6xl lg:text-8xl"
           >
-            The art of dining, <span className="italic text-gradient-gold">perfected</span> since 1968.
+            The art of pure vegetarian dining, <span className="italic text-gradient-gold">perfected</span>.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ function Home() {
             transition={{ duration: 0.9, delay: 0.5 }}
             className="mt-6 max-w-2xl text-balance text-base text-cream/80 sm:text-lg"
           >
-            Three Michelin stars. Four generations. One quiet obsession with the perfect evening.
+            Authentic South Indian flavors. Uncompromising culinary quality. A celebration of pure, traditional heritage for your family and guests.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ function Home() {
             className="mt-10 flex flex-wrap gap-4"
           >
             <Link to="/book" className="group inline-flex items-center gap-2 rounded-full gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.2_0.02_150)] shadow-luxe transition hover:brightness-105">
-              Reserve Table <ArrowRight size={16} className="transition group-hover:translate-x-0.5" />
+              Book Party Hall <ArrowRight size={16} className="transition group-hover:translate-x-0.5" />
             </Link>
             <Link to="/menu" className="inline-flex items-center gap-2 rounded-full border border-primary/50 px-7 py-3.5 text-sm font-medium text-cream backdrop-blur transition hover:bg-primary/10">
               Explore Menu
@@ -106,7 +106,7 @@ function Home() {
             transition={{ delay: 1.1, duration: 1 }}
             className="mt-20 grid max-w-2xl grid-cols-3 gap-8 border-t border-primary/20 pt-8"
           >
-            {[["57","Years of craft"],["3","Michelin stars"],["9","Course tasting"]].map(([n,l]) => (
+            {[["100%","Pure Vegetarian"],["Premium","Party Hall Venue"],["Daily","Fresh Ingredients"]].map(([n,l]) => (
               <div key={l}>
                 <p className="font-display text-3xl text-gradient-gold">{n}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.2em] text-cream/60">{l}</p>
@@ -120,9 +120,9 @@ function Home() {
       <section className="relative py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <SectionHeader
-            eyebrow="La Carte"
-            title="Signature dishes from the tasting menu"
-            subtitle="Each plate is a chapter in Chef Laurent's seasonal narrative — sourced within 300 km, plated within minutes."
+            eyebrow="Our Menu"
+            title="Signature dishes from our kitchen"
+            subtitle="Every plate represents our commitment to South Indian culinary traditions — crafted with freshly ground spices and pure ingredients."
           />
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {featured.map((d, i) => (
@@ -171,7 +171,7 @@ function Home() {
         </div>
       </section>
 
-      {/* CHEF */}
+      {/* CULINARY TRADITION */}
       <section className="relative py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
           <motion.div
@@ -182,16 +182,16 @@ function Home() {
             className="relative"
           >
             <div className="relative overflow-hidden rounded-[2rem] shadow-luxe">
-              <img src={chefImg} alt="Chef Laurent Verdé" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img src={chefImg} alt="Culinary Experts at Nanjundeshwara" loading="lazy" className="aspect-[4/5] w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.15_0.03_150)/0.7] to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-cream">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-primary">Head Chef</p>
-                <p className="mt-1 font-display text-2xl">Laurent Verdé</p>
+                <p className="text-[11px] uppercase tracking-[0.3em] text-primary">Our Masters</p>
+                <p className="mt-1 font-display text-2xl">Traditional Maestros</p>
               </div>
             </div>
             <div className="absolute -bottom-8 -right-4 hidden rounded-2xl glass p-5 shadow-luxe sm:block">
-              <p className="font-display text-3xl text-gradient-gold">32<span className="text-lg text-foreground/70">yrs</span></p>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">In the kitchen</p>
+              <p className="font-display text-3xl text-gradient-gold">100<span className="text-lg text-foreground/70">%</span></p>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Pure Vegetarian</p>
             </div>
           </motion.div>
 
@@ -201,18 +201,18 @@ function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
           >
-            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Chef Recommendation</span>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl">"Cook the memory, not the recipe."</h2>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Our Philosophy</span>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl">"Cook with devotion, serve with love."</h2>
             <p className="mt-6 text-muted-foreground">
-              Trained under Robuchon and Passard, Chef Laurent leads Maison Verdé's kitchen with a rare stillness — a discipline of restraint, precision, and generosity. Each tasting menu is a letter to the season.
+              Rooted in the rich culinary heritage of Karnataka, our kitchens are led by masters of pure vegetarian cuisine. Every spice blend is roasted and ground in-house, ensuring that whether you're joining us for a quick tiffin or hosting a grand wedding, the flavor remains uncompromisingly authentic.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Meilleur Ouvrier de France","3⭐ Michelin","Bocuse d'Or Finalist"].map((a) => (
+              {["Farm-Fresh Produce","No Artificial Colors","Traditional Recipes"].map((a) => (
                 <span key={a} className="rounded-full border border-primary/40 px-4 py-1.5 text-xs uppercase tracking-[0.15em] text-primary">{a}</span>
               ))}
             </div>
             <Link to="/chef" className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-secondary hover:gap-3 transition-all">
-              Meet the chef <ArrowRight size={16} />
+              Discover our heritage <ArrowRight size={16} />
             </Link>
           </motion.div>
         </div>
@@ -230,7 +230,7 @@ function Home() {
       {/* TESTIMONIALS */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="Kind Words" title="Praise for the house" />
+          <SectionHeader eyebrow="Kind Words" title="Praise from our guests" />
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {testimonials.map((t, i) => (
               <motion.blockquote
@@ -259,7 +259,7 @@ function Home() {
       {/* GALLERY PREVIEW */}
       <section className="pb-24 sm:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="La Maison" title="Moments from the house" />
+          <SectionHeader eyebrow="Our Venue" title="Moments at Nanjundeshwara" />
           <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {gallery.map((g, i) => (
               <motion.div
@@ -289,16 +289,16 @@ function Home() {
           <div className="relative overflow-hidden rounded-[2.5rem] gradient-emerald px-8 py-20 text-center text-cream shadow-luxe sm:px-16">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(" + hero + ")", backgroundSize: "cover", backgroundPosition: "center" }} />
             <div className="relative">
-              <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Reservations</span>
+              <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Reservations & Events</span>
               <h2 className="mx-auto mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl">
-                Reserve your evening at Maison Verdé.
+                Host your next celebration at Hotel Nanjundeshwara.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-cream/75">
-                Tables released three months in advance. Private venue available for weddings, celebrations, and corporate evenings.
+                Our premium party hall is perfect for weddings, birthdays, and corporate events. Contact our team to plan your customized pure veg catering menu.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <Link to="/book" className="rounded-full gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.2_0.02_150)] shadow-luxe">Book Venue</Link>
-                <Link to="/contact" className="rounded-full border border-primary/50 px-7 py-3.5 text-sm">Contact concierge</Link>
+                <Link to="/book" className="rounded-full gradient-gold px-7 py-3.5 text-sm font-semibold text-[oklch(0.2_0.02_150)] shadow-luxe">Book Party Hall</Link>
+                <Link to="/contact" className="rounded-full border border-primary/50 px-7 py-3.5 text-sm">Contact Us</Link>
               </div>
             </div>
           </div>

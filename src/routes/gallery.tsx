@@ -15,10 +15,10 @@ import dish3 from "@/assets/dish-3.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Maison Verdé" },
-      { name: "description", content: "A visual journey through Maison Verdé — interiors, signature dishes, private dining, terrace and events." },
-      { property: "og:title", content: "Gallery — Maison Verdé" },
-      { property: "og:description", content: "Interiors, dishes and private dining at Maison Verdé." },
+      { title: "Gallery — Hotel Nanjundeshwara" },
+      { name: "description", content: "A visual journey through Hotel Nanjundeshwara — interiors, signature dishes, private dining, terrace and events." },
+      { property: "og:title", content: "Gallery — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Interiors, dishes and private dining at Hotel Nanjundeshwara." },
     ],
   }),
   component: Gallery,

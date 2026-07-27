@@ -1,6 +1,6 @@
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
+import dish1 from "@/assets/dish-1.jpg"; // Idli, Medu Vada & Chutney/Sambar
+import dish2 from "@/assets/dish-2.jpg"; // South Indian Grand Thali / Meals
+import dish3 from "@/assets/dish-3.jpg"; // Crispy Masala Dosa
 
 export type MenuItem = {
   name: string;
@@ -11,35 +11,120 @@ export type MenuItem = {
 };
 
 export const MENU: Record<string, MenuItem[]> = {
-  Starters: [
-    { name: "Oyster Verdé", desc: "Fine de Claire, champagne mignonette, sea herbs.", price: "€28", image: dish1, special: true },
-    { name: "Foie Gras Royale", desc: "Slow-poached foie, pear compote, brioche shard.", price: "€36", image: dish3 },
-    { name: "Beetroot Carpaccio", desc: "Roasted heirloom beets, chèvre, walnut soil.", price: "€22", image: dish2 },
+  "Tiffin & Starters": [
+    {
+      name: "Idli Vada Combo",
+      desc: "Steamed fluffy rice cakes & crispy lentil donut served on banana leaf with coconut chutney and piping hot sambar.",
+      price: "₹120",
+      image: dish1,
+      special: true,
+    },
+    {
+      name: "Maddur Vada (2 pcs)",
+      desc: "Crispy fried onion, rice flour, and semolina patties seasoned with curry leaves and green chillies.",
+      price: "₹90",
+      image: dish1,
+    },
+    {
+      name: "Gobi Kempu Bezule",
+      desc: "Crispy cauliflower florets tossed in yogurt, green chillies, curry leaves, and South Indian spices.",
+      price: "₹180",
+      image: dish3,
+    },
   ],
+
+  "Dosa Specials": [
+    {
+      name: "Nanjundeshwara Ghee Masala Dosa",
+      desc: "Crispy golden crepe smeared with red garlic chutney, stuffed with spiced potato mash, cooked in pure ghee.",
+      price: "₹180",
+      image: dish3,
+      special: true,
+    },
+    {
+      name: "Open Butter Pudi Dosa",
+      desc: "Thick, soft-center crispy dosa generously dusted with house spicy gun powder (pudi) and a dollop of white butter.",
+      price: "₹190",
+      image: dish3,
+    },
+    {
+      name: "Rava Onion Dosa",
+      desc: "Lacy, wafer-thin crepe made from semolina, onion, crushed pepper, and fresh coriander.",
+      price: "₹160",
+      image: dish2,
+    },
+  ],
+
   "Main Course": [
-    { name: "Wagyu A5", desc: "Bincho-grilled, black truffle jus, potato mille-feuille.", price: "€96", image: dish2, special: true },
-    { name: "Duck à l'Orange", desc: "Rouennaise duck, blood-orange gastrique, endive.", price: "€64", image: dish3 },
-    { name: "Guinea Fowl", desc: "Wood-roasted, morel cream, wild leek ash.", price: "€52", image: dish1 },
+    {
+      name: "Nanjundeshwara Grand Royal Thali",
+      desc: "Steaming Sona Masoori rice served with Sambar, Rasam, Kootu, Kosambari, Curd, Crispy Appalam, and Sweet on a banana leaf.",
+      price: "₹280",
+      image: dish2,
+      special: true,
+    },
+    {
+      name: "Bisi Bele Bath",
+      desc: "Traditional Karnataka spicy rice and lentil porridge cooked with seasonal vegetables, ghee, and aromatic spices.",
+      price: "₹160",
+      image: dish2,
+    },
+    {
+      name: "Mysore Puliyogare",
+      desc: "Authentic tangy tamarind rice tempered with roasted peanuts, curry leaves, and dry spices.",
+      price: "₹140",
+      image: dish1,
+    },
+    {
+      name: "Special Curd Rice",
+      desc: "Creamy curd rice tempered with mustard seeds, curry leaves, ginger, and topped with fresh pomegranate.",
+      price: "₹130",
+      image: dish2,
+    },
   ],
-  Seafood: [
-    { name: "Diver Scallops", desc: "Seared Hokkaido scallops, gold leaf, verjus.", price: "€48", image: dish1, special: true },
-    { name: "Turbot Meunière", desc: "Whole Brittany turbot, brown butter, capers.", price: "€72", image: dish2 },
-    { name: "Lobster Thermidor", desc: "Half Breton lobster, cognac gratin, tarragon.", price: "€84", image: dish3 },
-  ],
-  Vegetarian: [
-    { name: "Truffle Risotto", desc: "Carnaroli, aged parmesan, shaved black truffle.", price: "€44", image: dish2 },
-    { name: "Garden Symphony", desc: "Seven-vegetable tasting, herb consommé.", price: "€38", image: dish1 },
-    { name: "Wild Mushroom Tart", desc: "Puff pastry, cep duxelles, tarragon oil.", price: "€32", image: dish3 },
-  ],
+
   Desserts: [
-    { name: "Grand Marnier Soufflé", desc: "Vanilla anglaise, candied zest.", price: "€22", image: dish3, special: true },
-    { name: "Chocolate Verdé", desc: "70% Valrhona, gold leaf, raspberry coulis.", price: "€24", image: dish3 },
-    { name: "Île Flottante", desc: "Poached meringue, praline, crème anglaise.", price: "€18", image: dish1 },
+    {
+      name: "Pineapple Kesari Bath",
+      desc: "Rich semolina pudding cooked in pure ghee, real pineapple chunks, saffron, and toasted cashews.",
+      price: "₹110",
+      image: dish3,
+      special: true,
+    },
+    {
+      name: "Pure Ghee Mysore Pak",
+      desc: "Traditional melt-in-your-mouth chickpea flour and cow ghee fudge.",
+      price: "₹130",
+      image: dish3,
+    },
+    {
+      name: "Elaneer Payasam",
+      desc: "Chilled tender coconut milk pudding flavored with cardamom and soft coconut pulp.",
+      price: "₹150",
+      image: dish1,
+    },
   ],
+
   Beverages: [
-    { name: "Champagne Flight", desc: "Three grande maison cuvées, sommelier selection.", price: "€68", image: dish1 },
-    { name: "Reserve Bordeaux", desc: "Cellar-select vintages by the glass.", price: "€36", image: dish2 },
-    { name: "Alcohol-Free Pairing", desc: "House-crafted seasonal infusions.", price: "€28", image: dish3 },
+    {
+      name: "Degree Filter Coffee",
+      desc: "Freshly brewed chicory filter decoction frothed with hot whole milk, served in a traditional brass dabara.",
+      price: "₹60",
+      image: dish1,
+      special: true,
+    },
+    {
+      name: "Spiced Majjige (Buttermilk)",
+      desc: "Chilled churned buttermilk seasoned with ginger, green chilli, cilantro, and asafoetida.",
+      price: "₹50",
+      image: dish2,
+    },
+    {
+      name: "Warm Saffron Badam Milk",
+      desc: "Rich hot milk simmered with real almond paste, cardamom, and Kashmiri saffron.",
+      price: "₹90",
+      image: dish3,
+    },
   ],
 };
 

@@ -8,9 +8,9 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "The Menu — Maison Verdé" },
-      { name: "description", content: "Explore Maison Verdé's seasonal tasting menu — starters, mains, seafood, vegetarian, desserts and rare beverages." },
-      { property: "og:title", content: "The Menu — Maison Verdé" },
+      { title: "The Menu — Hotel Nanjundeshwara" },
+      { name: "description", content: "Explore Hotel Nanjundeshwara's seasonal tasting menu — starters, mains, seafood, vegetarian, desserts and rare beverages." },
+      { property: "og:title", content: "The Menu — Hotel Nanjundeshwara" },
       { property: "og:description", content: "A seasonal Michelin-star menu, updated by Chef Laurent Verdé." },
     ],
   }),
@@ -25,7 +25,7 @@ function MenuPage() {
     <div className="pt-32">
       <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
         <SectionHeader
-          eyebrow="La Carte"
+          eyebrow="Our Menu"
           title="A seasonal Michelin menu"
           subtitle="Chef Laurent's tasting evolves with the harvest. Each plate is guided by memory, precision, and restraint."
         />

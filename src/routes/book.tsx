@@ -8,10 +8,10 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
-      { title: "Book the Venue — Maison Verdé" },
-      { name: "description", content: "Reserve a table or private venue at Maison Verdé. Weddings, corporate evenings, and intimate celebrations." },
-      { property: "og:title", content: "Book the Venue — Maison Verdé" },
-      { property: "og:description", content: "Reserve a table or private venue at Maison Verdé, Paris." },
+      { title: "Book the Venue — Hotel Nanjundeshwara" },
+      { name: "description", content: "Reserve a table or private venue at Hotel Nanjundeshwara. Weddings, corporate evenings, and intimate celebrations." },
+      { property: "og:title", content: "Book the Venue — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Reserve a table or private venue at Hotel Nanjundeshwara, Paris." },
     ],
   }),
   component: BookPage,
@@ -36,7 +36,7 @@ function BookPage() {
         >
           <div className="absolute inset-0 opacity-15" style={{ backgroundImage: `url(${hero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
           <div className="relative">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Maison Verdé</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-primary">Hotel Nanjundeshwara</span>
             <h3 className="mt-4 font-display text-3xl">An evening curated for you.</h3>
             <p className="mt-4 text-cream/80 text-sm">Every reservation is followed by a personal call from our concierge to tailor the menu, seating, and wine pairing.</p>
             <ul className="mt-8 space-y-3 text-sm">

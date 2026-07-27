@@ -2,39 +2,67 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Sparkles, Heart, Trophy, Star } from "lucide-react";
 import { SectionHeader } from "@/components/site/SectionHeader";
-import gal1 from "@/assets/gallery-1.jpg";
-import gal4 from "@/assets/gallery-4.jpg";
 import chefImg from "@/assets/chef.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Maison Verdé" },
-      { name: "description", content: "Our philosophy, mission, and the values that shape a Michelin-star dining experience at Maison Verdé." },
-      { property: "og:title", content: "About — Maison Verdé" },
-      { property: "og:description", content: "Philosophy, mission, and craft at Maison Verdé." },
+      { title: "About Us — Hotel Nanjundeshwara" },
+      { name: "description", content: "Our philosophy, mission, and values that shape the authentic pure vegetarian dining and party hall experience at Hotel Nanjundeshwara." },
+      { property: "og:title", content: "About Us — Hotel Nanjundeshwara" },
+      { property: "og:description", content: "Philosophy, mission, and pure culinary craft at Hotel Nanjundeshwara." },
     ],
   }),
   component: About,
 });
 
 const owners = [
-  { name: "Antoine Verdé", role: "Founder & Patron", img: gal4, bio: "Guardian of the house's founding spirit — hospitality above all.", quote: "A great restaurant remembers you before you arrive." },
-  { name: "Camille Verdé", role: "Creative Director", img: gal1, bio: "Third-generation Verdé, shaping the modern voice of the maison.", quote: "Elegance is precision made invisible." },
-  { name: "Laurent Verdé", role: "Head Chef", img: chefImg, bio: "Trained by Robuchon and Passard, leading the kitchen since 2011.", quote: "Cook the memory, not the recipe." },
+  { 
+    name: "Nanjundaswamy Rao", 
+    role: "Founder & Patriarch", 
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop", 
+    bio: "Established our founding vision — uncompromising purity and humble hospitality for every guest.", 
+    quote: "Good food is cooked with pure devotion and served like family." 
+  },
+  { 
+    name: "Ramesh Nanjundaswamy", 
+    role: "Managing Director", 
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop", 
+    bio: "Expanding our legacy into modern family dining and state-of-the-art party hall celebrations.", 
+    quote: "True luxury is consistency, cleanliness, and authentic taste." 
+  },
+  { 
+    name: "Chef Prakash", 
+    role: "Head of Culinary Operations", 
+    img: chefImg, 
+    bio: "Mastering traditional South Indian spice blends and authentic tiffin recipes since 2005.", 
+    quote: "Respect the ingredient, honor the tradition." 
+  },
 ];
 
 const values = [
-  { icon: Heart, title: "Our Philosophy", text: "Hospitality is a discipline. Every gesture — from the way we fold a napkin to the tempo of a course — carries intent." },
-  { icon: Sparkles, title: "Our Mission", text: "To honour the season, the guest, and the maker. Nothing on the plate arrives by accident." },
-  { icon: Trophy, title: "Our Vision", text: "A quiet, timeless standard of European fine dining — extended to a new generation without dilution." },
+  { 
+    icon: Heart, 
+    title: "Our Philosophy", 
+    text: "Purity is a sacred commitment. Every dish is crafted without compromise, using fresh farm produce and traditional recipes." 
+  },
+  { 
+    icon: Sparkles, 
+    title: "Our Mission", 
+    text: "To serve authentic Karnataka flavors that feel like home, while providing pristine party spaces for life's most precious celebrations." 
+  },
+  { 
+    icon: Trophy, 
+    title: "Our Vision", 
+    text: "To remain Bengaluru's most trusted pure vegetarian destination, bridging generational tastes with timeless hospitality." 
+  },
 ];
 
 const why = [
-  { n: "01", t: "Ingredients sourced within 300 km" },
-  { n: "02", t: "One server for every four guests" },
-  { n: "03", t: "Menu re-written every eight weeks" },
-  { n: "04", t: "Sommelier-led pairings from 900 references" },
+  { n: "01", t: "100% Pure Vegetarian Kitchen" },
+  { n: "02", t: "In-house freshly ground spices daily" },
+  { n: "03", t: "Spacious & elegant party hall venues" },
+  { n: "04", t: "Decades of trusted family recipes" },
 ];
 
 export default function About() { return <AboutPage />; }
@@ -43,7 +71,11 @@ function AboutPage() {
   return (
     <div className="pt-32">
       <section className="mx-auto max-w-7xl px-6 pb-16 lg:px-10">
-        <SectionHeader eyebrow="Our House" title="A Michelin-star maison built on restraint." subtitle="Four generations of the Verdé family, one uncompromising standard of hospitality." />
+        <SectionHeader 
+          eyebrow="Our House" 
+          title="A pure vegetarian institution built on tradition." 
+          subtitle="Decades of family dedication, serving an uncompromising standard of South Indian hospitality." 
+        />
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
@@ -68,7 +100,7 @@ function AboutPage() {
       {/* WHY */}
       <section className="bg-secondary text-secondary-foreground py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="Why Maison Verdé" title="Details that guests remember." />
+          <SectionHeader eyebrow="Why Hotel Nanjundeshwara" title="Details that guests remember." />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {why.map((w, i) => (
               <motion.div
@@ -90,7 +122,7 @@ function AboutPage() {
       {/* OWNERS */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <SectionHeader eyebrow="The Family" title="Custodians of the maison" />
+          <SectionHeader eyebrow="The Leadership" title="Custodians of our culinary legacy" />
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {owners.map((o, i) => (
               <motion.article
@@ -123,19 +155,25 @@ function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-2 lg:px-10">
           <div className="rounded-3xl bg-card p-10 shadow-soft">
             <Trophy className="text-primary" />
-            <h3 className="mt-4 font-display text-3xl">Awards & Recognition</h3>
+            <h3 className="mt-4 font-display text-3xl">Milestones & Recognition</h3>
             <ul className="mt-6 space-y-3 text-sm text-foreground/85">
-              {["Michelin ⭐⭐⭐ · 2004–2024","World's 50 Best Restaurants · #12","Gault & Millau 19/20","Grand Prix Culinaire · 2022","Relais & Châteaux member since 1994"].map((a) => (
-                <li key={a} className="flex items-center gap-3"><span className="h-1 w-6 bg-primary" /> {a}</li>
+              {[
+                "Top Rated Pure Veg Restaurant in Tumakuru / Bengaluru Highway · 2024",
+                "Best Family Event & Party Hall Venue · 2023",
+                "Excellence in Traditional South Indian Tiffin & Meals",
+                "Recognized for 100% Purity and Kitchen Hygiene",
+                "Trusted by Thousands of Families Since 1968"
+              ].map((a) => (
+                <li key={a} className="flex items-center gap-3"><span className="h-1 w-6 bg-primary shrink-0" /> {a}</li>
               ))}
             </ul>
           </div>
           <div className="gradient-emerald rounded-3xl p-10 text-cream shadow-luxe">
             <Star className="text-primary" />
             <h3 className="mt-4 font-display text-3xl">Guest Satisfaction</h3>
-            <p className="mt-4 text-cream/80">98% of guests rate their evening as "exceptional". Our concierge team follows up after every visit.</p>
+            <p className="mt-4 text-cream/80">98% of our guests rate their dining and party hall experience as exceptional. Our team personally ensures every celebration is memorable.</p>
             <div className="mt-8 grid grid-cols-3 gap-4 border-t border-primary/25 pt-6">
-              {[["98%","Exceptional"],["4.9","Avg. rating"],["12k","Reviews"]].map(([n,l]) => (
+              {[["98%","Exceptional"],["4.8","Avg. rating"],["1.3k+","Reviews"]].map(([n,l]) => (
                 <div key={l}>
                   <p className="font-display text-2xl text-primary">{n}</p>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-cream/70">{l}</p>
